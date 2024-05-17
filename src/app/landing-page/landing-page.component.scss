@@ -1,0 +1,231 @@
+$primary: #FAB23D;
+$light: #FFFFFF;
+$dark: #333333;
+$black: #111B21;
+$grey: #41444B;
+
+#home {
+    height: auto;
+    font-family: "Poppins";
+    background-color: $light;
+    padding: 70px;
+
+
+    .header {
+        .title {
+            h1 {
+                font-family: "Poppins";
+                font-weight: 600;
+                font-size: 60px;
+                letter-spacing: -4px;
+                color: $black;
+
+                span {
+                    color: $grey;
+                    opacity: 80%;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                margin-top: 35px;
+            }
+
+        }
+
+    }
+
+
+    .zoneVideo {
+        margin-top: 50px;
+
+        .frame {
+
+            iframe {
+                display: flex;
+                align-self: center;
+                width: 500px;
+                height: 250px;
+                border-radius: 5px;
+            }
+        }
+
+        .textZone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px 0;
+
+            h2 {
+                font-family: "Poppins";
+                font-size: 36px;
+                color: $black;
+            }
+
+            p {
+                font-size: 20px;
+                color: $grey;
+            }
+
+            button {
+                width: 200px;
+                padding: 18px 24px;
+                border-radius: 76px;
+                background-color: $primary;
+                color: $black;
+                border: none;
+                transition: all .4s;
+
+                &:hover {
+                    background-color: $black;
+                    color: $primary;
+                    transition: all .4s;
+                }
+            }
+        }
+
+    }
+
+    .benefitsLoss {
+        margin-top: 50px;
+
+        .loss,
+        .benefits {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                font-family: "Poppins";
+                font-size: 32px;
+                font-weight: 600;
+                color: $black;
+                line-height: 40px;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                margin: 10px 0;
+
+                .itemList {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+
+                    .iconItem {
+                        min-width: 40px;
+                        min-height: 40px;
+                        background-color: $primary;
+                        border-radius: 50px;
+                        display: flex;
+                        align-items: center;
+
+                        mat-icon {
+                            scale: 0.8;
+                            margin: 0 auto;
+                            color: $black;
+                        }
+                    }
+
+                    p {
+                        margin: 0 10px;
+                        color: $grey;
+                    }
+                }
+            }
+
+        }
+
+
+    }
+}
+
+@media (max-width: 576px) { 
+    #home {
+        padding: 20px;
+        // margin-top: 100px;
+
+        .header {
+            .title {
+                h1 {
+                    margin: 5px 0;
+                    font-size: 36px;
+                    letter-spacing: -2px;
+    
+                    span {
+                        color: $grey;
+                        opacity: 80%;
+                    }
+                }
+    
+                p {
+                    font-size: 14px;
+                    margin-top: 20px;
+                }
+    
+            }
+    
+        }
+
+        .zoneVideo {
+            margin-top: 35px;
+    
+            .frame {
+    
+                iframe {
+                    width: 100%;
+                }
+            }
+    
+            .textZone {
+
+                h2 {
+                    font-size: 26px;
+                }
+    
+                p {
+                    font-size: 16px;
+                    color: $grey;
+                }
+    
+                button {
+                    width: 200px;
+                    padding: 16px;
+                }
+            }
+    
+        }
+
+        .benefitsLoss {
+            margin-top: 50px;
+    
+            .loss,
+            .benefits {
+                margin: 10px 0;
+
+    
+                h3 {
+                    font-size: 26px;
+                    line-height: 30px;
+                }  
+            }  
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px) { 
+    .header {
+        .title {
+            h1 {
+                line-height: 50px;
+            }
+        }
+
+    }
+}
+
+// // X-Large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+
+// // XX-Large devices (larger desktops, 1400px and up)
+// @media (min-width: 1400px) { ... }

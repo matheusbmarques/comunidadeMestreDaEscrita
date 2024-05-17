@@ -1,0 +1,70 @@
+<nav>
+    <label class="hamburger">
+        <input type="checkbox">
+        <svg viewBox="0 0 32 32">
+            <path 
+                class="line line-top-bottom"
+                d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+            </path>
+            <path class="line" d="M7 16 27 16"></path>
+        </svg>
+    </label>
+</nav>
+
+<mat-toolbar id="header">
+    <!-- <nav> -->
+         <div class="logo">
+            <img src="../../assets/images/newLogo.png" alt="Logo Mestre da Escrita">
+        </div>
+
+        <mat-divider></mat-divider>
+
+
+        <ul>
+            <li (click)="navigateToAchorLinkTrigger('home')">
+                <a>Home</a>
+            </li>
+
+            <li (click)="navigateToAchorLinkTrigger('method')">
+                <a>Método</a>
+            </li>
+
+            <li (click)="navigateToAchorLinkTrigger('benefits')">
+                <a>Benefícios</a>
+            </li>
+
+            <li (click)="navigateToAchorLinkTrigger('results')">
+                <a>Resultados</a>
+            </li>
+
+            <li (click)="navigateToAchorLinkTrigger('pricing')">
+                <a>Preço</a>
+            </li>
+
+            <li>
+                <a href="/history">Professor</a>
+            </li>
+        </ul>
+
+
+        <div class="buttonSign">
+            <a href="https://pay.kiwify.com.br/DvrLSdy" target="_blank">
+                <button>
+                    <span>Assinar</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <g clip-path="url(#clip0_274_118)">
+                        <path d="M7.31543 2.06447L12.2509 6.99997L7.31543 11.9355" stroke-width="1.99997" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.2509 7L1.75098 7" stroke-width="1.99997" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_274_118">
+                        <rect width="14" height="14" fill="white" transform="translate(0.000976562)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </a>
+        </div>
+
+    <!-- </nav> -->
+</mat-toolbar>

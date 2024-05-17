@@ -1,0 +1,79 @@
+<section id="method">
+    <div class="container-fluid">
+        <div class="header row">
+
+            <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-4 col-xxl-4">
+                <h2>Método do treinamento</h2>
+            </div>
+
+            <div class="subtitle col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-8 col-xxl-8">
+                <p>Sabe aquela literatura tradicional que muitas vezes parece chata e não funciona para todos? A Comunidade Mestre da Escrita não segue esse caminho. Aqui o aluno aprende conhecimentos testados e comprovados para lidar com a sua mente, escrever o seu livro e publicá-lo, com um conhecimento simples e fácil de por em prática.</p>
+            </div>
+
+            <div class="content col-12">
+                <p>O treinamento é dividido em três etapas:</p>
+    
+                <div class="steps">
+    
+                    <div class="tabs">
+                        <div class="tab1">
+                            <button class="btn1" (click)="hideText(1)" [ngClass]="{ 'active': activeStep === 1 }">Primeira etapa</button>
+                        </div>
+                
+                
+                        <div class="tab2">
+                            <button class="btn2" (click)="hideText(2)" [ngClass]="{ 'active': activeStep === 2 }">Segunda etapa</button>
+                        </div>
+                
+                
+                        <div class="tab3">
+                            <button class="btn3" (click)="hideText(3)" [ngClass]="{'active': activeStep === 3}">Terceira etapa</button>
+                        </div>
+                    </div>
+            
+            
+                    <div class="contentSteps">
+                        <div #text1 class="text1">
+                            <h4>Psicologia</h4>
+                            <p>Você vai aprender habilidades mentais que vão ajudar a arrumar suas emoções, manter o foco e ter disciplina para escrever. Afinal, a mente é uma ferramenta poderosa!</p>
+                        </div>
+                
+                        
+                        <div #text2 class="text2">
+                            <h4>Técnica</h4>
+                            <p>Nesta etapa, você vai descobrir como escrever um livro de qualquer gênero, usando suas emoções para deixar sua escrita única.</p>
+                        </div>
+                
+                        <div #text3 class="text3">
+                            <h4>Prática</h4>
+                            <p>Nesta última etapa, vamos por a mão na massa! Você vai aprender a escrever o seu livro no Microsoft Word, revisar textos, criar uma capa incrível e muito mais.</p>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contrast row">
+            <div class="img1 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <img 
+                    src="../../assets/images/escritorGaveta.png" 
+                    alt="Imagem ilustrando um escritor de gaveta"
+                    width="350"
+                >
+                <h3 style="align-self: flex-start; color: #41444B; opacity: 0.6;">Escritor de gaveta sem o treinamento!</h3>
+            </div>
+
+            <div class="img2 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                <h3 style="align-self: flex-end; text-align: end;">Mestre da escrita com o treinamento!</h3>
+                <img 
+                    src="../../assets/images/escritorMestre.png" 
+                    alt="Imagem ilustrando um escritor mestre da escrita"
+                    width="350"
+                >
+            </div>
+        </div>
+        
+    </div>
+</section>

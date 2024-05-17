@@ -1,0 +1,119 @@
+$primary: #FAB23D;
+$light: #FFFFFF;
+$background: #FBFBFE;
+$dark: #333333;
+$black: #111B21;
+$grey: #41444B;
+
+
+#footer {
+    background-color: $black;
+
+    height: auto;
+    padding: 50px;
+
+    .content {
+        display: flex;
+        align-self: center;
+        z-index: 1;
+
+
+
+        .mediasSocial {
+            display: flex;
+            justify-content: end;
+            align-self: center;
+
+            .whatsapp,
+            .instagram {
+                display: flex;                
+                justify-content: center;
+                cursor: pointer;
+
+                width: 50px;
+                height: 50px;
+                margin: 0 15px;
+
+                z-index: 1;
+                border-radius: 50%;
+                border: none;
+                transition: .4s ease-in-out;
+
+                svg {
+                    align-self: center;
+                    opacity: 0.5;
+                    transition: all .4s;
+
+                    &:hover {
+                        opacity: 1;
+                        transition: all .4s;
+                    }
+                }
+
+
+
+            }
+        }
+
+    }
+
+    .rightsReserved {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        margin-top: 30px;
+
+        mat-divider {
+            align-self: center;
+            // width: 37%;
+        }
+
+        p {
+            font-family: "Poppins" !important;
+            font-size: 12px;
+            opacity: 0.6;
+            display: flex;
+            justify-content: center;
+            color: $light;
+            margin: 0;
+        }
+    }
+
+
+}
+
+
+
+
+//media screen 
+
+@media screen and (max-width: 600px) {
+    #footer {
+        padding: 25px;
+
+        .content {
+            .logo {
+                img {
+                    width: 150px;
+                }
+            }
+    
+            .mediasSocial {    
+                .whatsapp,
+                .instagram {
+                    width: 35px;
+                    height: 35px;
+                    margin: 0 15px;
+    
+                }
+            }
+    
+        }
+
+        .rightsReserved {    
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+}

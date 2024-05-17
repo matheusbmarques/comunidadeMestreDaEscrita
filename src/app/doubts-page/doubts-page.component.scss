@@ -1,0 +1,120 @@
+$primary: #FAB23D;
+$light: #FFFFFF;
+$dark: #333333;
+$black: #111B21;
+$grey: #41444B;
+
+#doubts {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: $light;
+    padding: 20px;
+
+    .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1;
+        margin: 0 auto;
+
+        .contentDoubts {
+
+            mat-accordion {
+                mat-expansion-panel {
+                    border-radius: 10px;
+                    background-color: #FFFFFF;
+                    box-shadow: 0px 2px 10px 0px rgba(49, 49, 49, 0.15);
+
+                    color: #41444B;
+                    margin: 20px 0;
+
+                    mat-panel-title {
+                        font-family: "Poppins";
+                        font-weight: 600;
+                        color: $grey;
+                    }
+
+                    p {
+                        font-family: "Poppins";
+                    }
+
+                }
+
+            }
+
+
+        }
+    }
+
+
+
+}
+
+::ng-deep .mat-expansion-indicator::after {
+    color: $grey !important;
+}
+
+// @media screen and (max-width: 600px) {
+//     #doubts {
+//         height: auto;
+//         overflow: hidden;
+
+//         .content {
+//             margin: 20px auto;
+
+//             h3 {
+//                 font-size: 35px;
+//                 margin: 20px 35px;
+//                 line-height: 35px;
+//             }
+
+//             .contentDoubts {
+//                 mat-accordion {
+//                     mat-expansion-panel {
+//                         width: 95%;
+//                         margin: 20px auto;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+::ng-deep {
+    .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+        background-color: $light;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #doubts {
+    
+        .content {
+    
+            .contentDoubts {
+    
+                mat-accordion {
+                    mat-expansion-panel {
+    
+                        mat-panel-title {
+                            font-size: 12px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                        }
+    
+    
+                    }
+    
+                }
+    
+    
+            }
+        }
+    
+    
+    
+    }
+}

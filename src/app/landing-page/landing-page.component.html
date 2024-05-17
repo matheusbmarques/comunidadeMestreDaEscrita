@@ -1,0 +1,135 @@
+<app-header-page
+(navigateToAnchorLink)="scrollToElement($event == 'home' ? home : $event == 'method' ? method : $event == 'benefits' ? benefits : $event == 'results' ? results : pricing)"></app-header-page>
+
+<section id="home" #home>
+    <div class="container-fluid">
+
+            <div class="header row">
+
+                <div class="title col-12">
+                    <h1><span>Antes de arrumar as palavras,</span></h1>
+                    <h1>arrume as emoções!</h1>
+                    <p>Como sair de um escritor de gaveta para um <b>Mestre da Escrita!</b></p>
+                </div>
+
+            </div>
+
+            <div class="zoneVideo row">
+                <div class="frame col-xs-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7" >
+                    <iframe src="https://www.youtube.com/embed/vZQuKUthB_A?si=7WnpFBS8yneHxEtT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <div class="textZone col-lg-5 col-xl-5 col-xxl-5">
+                    <h2><b>Assista a aula e aprenda gratuitamente:</b></h2>
+                    <p><b>Arrumar suas emoções, escrever seu livro e como publicá-lo!</b></p>
+                    
+                        <a href="https://pay.kiwify.com.br/DvrLSdy" target="_blank">
+                            <button>
+                                Quero ser um Mestre!
+                            </button>
+                        </a>
+                    
+                </div>
+            </div>
+            
+            <div class="benefitsLoss row">
+
+                <div class="loss col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <h3>Malefícios de ser um escritor de gaveta:</h3>
+
+                    <div class="list">
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Olha para as páginas em branco e fica horas tremendo sem escrever nada.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Procrastina todos os dias e não possui habilidades mentais para evitar tal problema.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Escreve uns rabiscos ali e aqui, mas o livro fica preso na gaveta.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Não conhece suas próprias emoções e fica perdido ao escrever.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6  col-xxl-6" >
+                    <h3>Benefícios de ser um Mestre da Escrita:</h3>
+
+                    <div class="list">
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Consegue escrever sem ter medo das páginas em branco.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Reconhece a procrastinação e usa habilidades mentais para evitá-la.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Escreve e publica vários livros num ano.</p>
+                        </div>
+
+                        <div class="itemList">
+                            <div class="iconItem">
+                                <mat-icon>east</mat-icon>
+                            </div>
+                            <p>Usa suas próprias emoções para escrever.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </div>
+</section>
+
+<div #method>
+    <app-method-page></app-method-page>
+</div>
+
+<div #benefits>
+    <app-benefits-page></app-benefits-page>
+</div>
+
+<div #results>
+    <app-result-page></app-result-page>
+</div>
+
+<div #pricing>
+    <app-pricing-page></app-pricing-page>
+</div>
+
+<div>
+    <app-doubts-page></app-doubts-page>
+</div> 
+
+<div>
+    <app-footer-page></app-footer-page>
+</div>
+
+
