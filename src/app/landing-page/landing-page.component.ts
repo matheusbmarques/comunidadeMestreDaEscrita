@@ -1,12 +1,18 @@
-import { AfterViewInit, Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ConfigService } from '../services/config.service';
+
+declare var fbq: any;
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
+
 export class LandingPageComponent implements OnInit, AfterViewInit {
+
+  purchaseValue: number = 39.90;
 
   // @ts-ignore
   @ViewChild('home', { read: ElementRef }) home: ElementRef;
@@ -25,6 +31,7 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
+    private configService: ConfigService,
   ) { }
 
   ngOnInit(): void {
@@ -43,6 +50,27 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
     //     this.navigateToAchorLinkTrigger(this.pricing.nativeElement);
     //   }
     // }
+  }
+
+  // Função para rastrear o evento de compra pelo Pixel do Facebook
+  trackPixelPurchase(value: number) {
+    fbq('track', 'Purchase', { value: value, currency: 'BRL' });
+  }
+
+  // Função para enviar o evento para a API de Conversões
+  trackPurchase(value: number) {
+    const eventData = {
+      email: 'anonimo@exemplo.com',
+      currency: 'BRL',
+      value: value
+    };
+    this.configService.sendEvent('Purchase', eventData).subscribe();
+  }
+
+  // Função para acionar ambos os métodos quando uma compra é feita
+  onPurchase() {
+    this.trackPixelPurchase(this.purchaseValue);
+    this.trackPurchase(this.purchaseValue);
   }
 
   // @ts-ignore

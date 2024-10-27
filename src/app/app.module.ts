@@ -20,6 +20,7 @@ import { DoubtsPageComponent } from './doubts-page/doubts-page.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HistoryComponent } from './history/history.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     MatExpansionModule,
     MatDividerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
